@@ -47,6 +47,9 @@ namespace BusinessLogicLayer
             _dbContext.Entry(entity).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<T>> WhereAsync(Func<T, bool> predicate)
+          => await Task.FromResult(_dbContext.Set<T>().Where(predicate));
     }
 
 }
