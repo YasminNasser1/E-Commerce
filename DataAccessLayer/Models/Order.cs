@@ -13,11 +13,13 @@ namespace DataAccessLayer.Models
         [Key]
         public int OrderId { get; set; }
         public DateTimeOffset OrderDate { get; set; }
-        public OrderStatus Status { get; set; }
+        public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public string Address { get; set; }
         public decimal TotalPrice { get; set; }
 
-        public User UserId { get; set; }
-        public virtual ICollection <Product> Products { get; set; } = new HashSet<Product>();
+        public long UserId { get; set; }
+        public virtual User User { get; set; } 
+        public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
     }
 }
+

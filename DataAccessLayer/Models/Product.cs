@@ -25,6 +25,8 @@ namespace DataAccessLayer.Models
 
         public int ProductTypeyId { get; set; }
 
+        public int Quantity { get; set; } // Update
+
         public ProductType ProductType { get; set; }
 
         // Navigational property

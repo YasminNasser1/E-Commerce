@@ -127,6 +127,18 @@
     <Compile Include="Migrations\202407280931570_initialctreate.Designer.cs">
       <DependentUpon>202407280931570_initialctreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407281359009_inint2.cs" />
+    <Compile Include="Migrations\202407281359009_inint2.Designer.cs">
+      <DependentUpon>202407281359009_inint2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407290736416_init2.cs" />
+    <Compile Include="Migrations\202407290736416_init2.Designer.cs">
+      <DependentUpon>202407290736416_init2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407290833195_init3.cs" />
+    <Compile Include="Migrations\202407290833195_init3.Designer.cs">
+      <DependentUpon>202407290833195_init3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -147,6 +159,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202407280931570_initialctreate.resx">
       <DependentUpon>202407280931570_initialctreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407281359009_inint2.resx">
+      <DependentUpon>202407281359009_inint2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407290736416_init2.resx">
+      <DependentUpon>202407290736416_init2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407290833195_init3.resx">
+      <DependentUpon>202407290833195_init3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,6 +20,14 @@ namespace BusinessLogicLayer.Repo
         Task DeleteAsync(int id);
 
         Task CreateAsync(T entity);
+        Task AddProductToCartAsync(int productId, long userId, int quantity);
+
+        Task UpdateCartAsync(int productId, long userId, int quantity);
+
+        Task DeleteFromCartAsync(int productId, long userId);
+
+        Task CheckoutAsync(long userId, string address);
+
 
     }
 }
