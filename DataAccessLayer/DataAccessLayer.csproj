@@ -79,6 +79,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -139,9 +142,58 @@
     <Compile Include="Migrations\202407290833195_init3.Designer.cs">
       <DependentUpon>202407290833195_init3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407300831288_ini.cs" />
+    <Compile Include="Migrations\202407300831288_ini.Designer.cs">
+      <DependentUpon>202407300831288_ini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301003298_iniii.cs" />
+    <Compile Include="Migrations\202407301003298_iniii.Designer.cs">
+      <DependentUpon>202407301003298_iniii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301009413_iniiii2.cs" />
+    <Compile Include="Migrations\202407301009413_iniiii2.Designer.cs">
+      <DependentUpon>202407301009413_iniiii2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301015510_iiii.cs" />
+    <Compile Include="Migrations\202407301015510_iiii.Designer.cs">
+      <DependentUpon>202407301015510_iiii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301052329_name.cs" />
+    <Compile Include="Migrations\202407301052329_name.Designer.cs">
+      <DependentUpon>202407301052329_name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301126012_iiiiiii.cs" />
+    <Compile Include="Migrations\202407301126012_iiiiiii.Designer.cs">
+      <DependentUpon>202407301126012_iiiiiii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301316213_cartitem model refactor product and cart.cs" />
+    <Compile Include="Migrations\202407301316213_cartitem model refactor product and cart.Designer.cs">
+      <DependentUpon>202407301316213_cartitem model refactor product and cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301342464_trial.cs" />
+    <Compile Include="Migrations\202407301342464_trial.Designer.cs">
+      <DependentUpon>202407301342464_trial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301419369_froeing keys in cartitem.cs" />
+    <Compile Include="Migrations\202407301419369_froeing keys in cartitem.Designer.cs">
+      <DependentUpon>202407301419369_froeing keys in cartitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301503028_trial2.cs" />
+    <Compile Include="Migrations\202407301503028_trial2.Designer.cs">
+      <DependentUpon>202407301503028_trial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301740116_fk in order.cs" />
+    <Compile Include="Migrations\202407301740116_fk in order.Designer.cs">
+      <DependentUpon>202407301740116_fk in order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407301802507_product add quantity.cs" />
+    <Compile Include="Migrations\202407301802507_product add quantity.Designer.cs">
+      <DependentUpon>202407301802507_product add quantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\CustmomerBasket.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderStatus.cs" />
@@ -168,6 +220,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407290833195_init3.resx">
       <DependentUpon>202407290833195_init3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407300831288_ini.resx">
+      <DependentUpon>202407300831288_ini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301003298_iniii.resx">
+      <DependentUpon>202407301003298_iniii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301009413_iniiii2.resx">
+      <DependentUpon>202407301009413_iniiii2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301015510_iiii.resx">
+      <DependentUpon>202407301015510_iiii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301052329_name.resx">
+      <DependentUpon>202407301052329_name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301126012_iiiiiii.resx">
+      <DependentUpon>202407301126012_iiiiiii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301316213_cartitem model refactor product and cart.resx">
+      <DependentUpon>202407301316213_cartitem model refactor product and cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301342464_trial.resx">
+      <DependentUpon>202407301342464_trial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301419369_froeing keys in cartitem.resx">
+      <DependentUpon>202407301419369_froeing keys in cartitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301503028_trial2.resx">
+      <DependentUpon>202407301503028_trial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301740116_fk in order.resx">
+      <DependentUpon>202407301740116_fk in order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407301802507_product add quantity.resx">
+      <DependentUpon>202407301802507_product add quantity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

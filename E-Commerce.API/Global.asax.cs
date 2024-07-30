@@ -1,5 +1,7 @@
 ﻿using BusinessLogicLayer;
+using BusinessLogicLayer.Interface;
 using BusinessLogicLayer.Repo;
+using BusinessLogicLayer.Repositories;
 using DataAccessLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -28,7 +30,8 @@ namespace E_Commerce.API
 
             // Set up dependency injection
             var container = new UnityContainer();
-            container.RegisterType<IGenaricrepository<Product>, GenaricRepository<Product>>();
+			//  container.RegisterType<IGenaricrepository<Product>, GenaricRepository<Product>>();
+			container.RegisterType<ICartRepository, CartRepository>();
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
 	}

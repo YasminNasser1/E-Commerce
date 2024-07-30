@@ -27,6 +27,8 @@ namespace DataAccessLayer.Context
         public DbSet<ProductBrand> ProductBrands { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }  // Ensure this is defined
+
 
     }
 }

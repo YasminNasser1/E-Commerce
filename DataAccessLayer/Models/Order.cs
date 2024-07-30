@@ -18,7 +18,8 @@ namespace DataAccessLayer.Models
         public decimal TotalPrice { get; set; }
 
         public long UserId { get; set; }
-        public virtual User User { get; set; } 
+        [ForeignKey("UserId")]
+        public User User { get; set; }
         public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
     }
 }
