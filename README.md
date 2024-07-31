@@ -7,6 +7,194 @@ This documentation provides details on the API endpoints available for managing 
 
 ## API Endpoints
 
+### Product Management
+
+#### Add Product
+
+**URL**: AddProducts
+**METHOD**:'POST'
+ **Description**: Adds a New product .
+ **Body**
+{
+    "Name": "Sample Product",
+    "Description": "This is an Sample product.",
+    "PictureUrl": "http://example.com/picture.jpg",
+    "Price": 10000.00,
+    "Rate": 1,
+    "Target": 1,  // assuming Target is an enum, replace with appropriate value
+    "Color": "Blue",
+    "Size": "L",
+    "Discount": 0.20,
+    "ProductBrandId": 1,
+    "ProductTypeyId": 1
+}
+
+- **Responses**:
+  - `200 OK`: Product added successfully.
+
+
+///////////////////////////////////////////
+#### Get Product by ID
+
+- **URL**: `GetProductByID/ProductId`
+- **Method**: `GET`
+- **Description**: Retrieves specified Product.
+- **Parameters**:
+  - `ProductID` : The ID of the Product.
+- **Responses**:
+  - `200 OK`:
+  - {
+    "Carts": [],
+    "Orders": [],
+    "Name": "Sample Product",
+    "Description": "This is an Sample product.",
+    "PictureUrl": "http://example.com/picture.jpg",
+    "Price": 10000,
+    "Rate": 1,
+    "Target": 1,
+    "Color": "Blue",
+    "Size": "L",
+    "Discount": 0.2,
+    "ProductBrandId": 1,
+    "ProductBrand": null,
+    "ProductTypeyId": 1,
+    "ProductType": null,
+    "Id": 4
+}.
+  - `404 Not Found`: No orders found for the specified user.
+  - `500 Internal Server Error`: Error retrieving orders.
+
+
+////////////////////////////////////////////////////////////////
+
+######## Get All Products
+**URL**: /products
+**METHOD**:'Get'
+ **Description**:Get All products .
+ 
+- **Responses**:
+  - `200 OK`:
+  - [
+    {
+        "Carts": [],
+        "Orders": [],
+        "Name": "Sample Product",
+        "Description": "This is an Sample product.",
+        "PictureUrl": "http://example.com/picture.jpg",
+        "Price": 10000,
+        "Rate": 1,
+        "Target": 1,
+        "Color": "Blue",
+        "Size": "L",
+        "Discount": 0.2,
+        "ProductBrandId": 1,
+        "ProductBrand": null,
+        "ProductTypeyId": 1,
+        "ProductType": null,
+        "Id": 3
+    },
+    {
+        "Carts": [],
+        "Orders": [],
+        "Name": "Sample Product",
+        "Description": "This is an Sample product.",
+        "PictureUrl": "http://example.com/picture.jpg",
+        "Price": 10000,
+        "Rate": 1,
+        "Target": 1,
+        "Color": "Blue",
+        "Size": "L",
+        "Discount": 0.2,
+        "ProductBrandId": 1,
+        "ProductBrand": null,
+        "ProductTypeyId": 1,
+        "ProductType": null,
+        "Id": 4
+    }
+    
+    /////////////////////////////////////////////////////////////
+
+
+#### Delete Product 
+
+- **URL**: `Deletproduct/ProductId`
+- **Method**: `DELETE`
+- **Description**: Removes a product 
+- **Parameters**:
+  - `productId` (int): The ID of the product.
+- **Responses**:
+  - `200 OK`: Product removed successfully.
+  /////////////////////////////////////
+##### GetAllBrands
+
+- **URL**:/Brands
+- **Method**: `GET`
+- **Description**: GETAllBrands 
+
+- **Responses**:
+    {
+        "Name": "Zara",
+        "products": [],
+        "Id": 1
+    },
+    {
+        "Name": "Defacto",
+        "products": [],
+        "Id": 2
+    },
+    {
+        "Name": "LC",
+        "products": [],
+        "Id": 3
+    }
+
+
+/////////////////////////////////////////
+
+
+#### Update Product
+
+- **URL**: `/UpdateProducts/ProductID`
+- **Method**: `PUT`
+- **Description**: Updates the product .
+**Body**
+  {
+    "Name": "Yasmine Product",
+    "Description": "This is an example product.",
+    "PictureUrl": "http://example.com/picture.jpg",
+    "Price": 99.99,
+    "Rate": 5,
+    "Target": 1,  // assuming Target is an enum, replace with appropriate value
+    "Color": "Red",
+    "Size": "M",
+    "Discount": 0.10,
+    "ProductBrandId": 1,
+    "ProductTypeyId": 1,
+    "id":2
+
+}
+- **Responses**:
+  - `200 OK`: Cart updated successfully.
+  - `400 Bad Request`: Invalid quantity or error updating the cart.
+
+////////////////////////////////////////////////////////////
+###########GetAllProductByTypeID
+/products?typeId=1
+- **URL**: `/products?typeId={productId}`
+- **Method**: `GET`
+
+
+/////////////////////////////////
+###########GetAllProductByBrandID
+
+- **URL**: `/products?BrandId={productId}`
+- **Method**: `GET`
+- 
+////////////////////////////////////////
+
+
+
+
 ### Cart Management
 
 #### Add Product to Cart
