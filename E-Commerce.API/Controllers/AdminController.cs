@@ -26,7 +26,7 @@ namespace E_Commerce.API.Controllers
         {
             try
             {
-                var orders = await _adminRepo.GetTotalOrdersAsync();
+                var orders = await _adminRepo.GetShippedOrdersWithDetailsAsync();
                 return Ok(orders);
             }
             catch (Exception ex)
@@ -57,6 +57,21 @@ namespace E_Commerce.API.Controllers
             try
             {
                 var sales = await _adminRepo.GetTotalSalesAsync();
+                return Ok(sales);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
+        [HttpGet]
+        [Route("salesofProducts")]
+        public async Task<IHttpActionResult> GetSalesOfProducts()
+        {
+            try
+            {
+                var sales = await _adminRepo.GetProductSalesAsync();
                 return Ok(sales);
             }
             catch (Exception ex)
@@ -110,6 +125,22 @@ namespace E_Commerce.API.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("vendors")]
+        public async Task<IHttpActionResult> GetVendors()
+        {
+            try
+            {
+                var vendors = await _adminRepo.GetVendorsAsync();
+                return Ok(vendors);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
+
         [HttpPut]
         [Route("reject-vendor/{vendorId}")]
         public async Task<IHttpActionResult> RejectVendor(long vendorId)
@@ -124,6 +155,8 @@ namespace E_Commerce.API.Controllers
                 return InternalServerError(ex);
             }
         }
+
+
     }
 
 }

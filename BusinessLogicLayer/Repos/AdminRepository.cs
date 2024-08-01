@@ -90,10 +90,15 @@ namespace BusinessLogicLayer.Repositories
                                  .ToListAsync();
         }
 
-        public async Task<int> GetTotalOrdersAsync()
+        public async Task<List<Order>> GetShippedOrdersWithDetailsAsync()
         {
-            return await _context.Orders.CountAsync();
+            return await _context.Orders
+                .Where(o => o.Status == OrderStatus.Delivered)
+                .Include(o => o.User)  // Include user details
+                .Include(o => o.Products)  // Include products
+                .ToListAsync();
         }
+
 
         public async Task<decimal> GetTotalSalesAsync()
         {
@@ -113,6 +118,12 @@ namespace BusinessLogicLayer.Repositories
                                  .Take(count)
                                  .ToListAsync();
         }
-       
+        public async Task<List<User>> GetVendorsAsync()
+        {
+            return await _context.Users
+                .Where(u => u.Role == UserRole.Vendor)
+                .ToListAsync();
+        }
+
     }
 }

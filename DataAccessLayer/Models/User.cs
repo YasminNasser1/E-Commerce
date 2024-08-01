@@ -20,7 +20,10 @@ namespace DataAccessLayer.Models
         public string VendorCertificateNumber { get; set; }
 
         public byte[] VendorCertificateImage { get; set; }
-        public VendorStatus VendorStatus { get; set; } = VendorStatus.Pending;
+
+        public VendorStatus? VendorStatus { get; set; } // Nullable enum
+
+        //public VendorStatus VendorStatus { get; set; } = VendorStatus.Pending;
 
         [JsonIgnore]
         public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();

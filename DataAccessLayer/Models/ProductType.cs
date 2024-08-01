@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace DataAccessLayer.Models
 	public class ProductType:BaseEntity
 	{
         public string Name { get; set; }
+        [JsonIgnore]
+
         public virtual ICollection<Product> products { get; set; } = new HashSet<Product>();
 
     }

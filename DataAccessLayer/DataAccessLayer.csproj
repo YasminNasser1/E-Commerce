@@ -202,6 +202,10 @@
     <Compile Include="Migrations\202408010723264_vendor status in user.Designer.cs">
       <DependentUpon>202408010723264_vendor status in user.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408010826583_vendor status nullable.cs" />
+    <Compile Include="Migrations\202408010826583_vendor status nullable.Designer.cs">
+      <DependentUpon>202408010826583_vendor status nullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -279,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408010723264_vendor status in user.resx">
       <DependentUpon>202408010723264_vendor status in user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408010826583_vendor status nullable.resx">
+      <DependentUpon>202408010826583_vendor status nullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

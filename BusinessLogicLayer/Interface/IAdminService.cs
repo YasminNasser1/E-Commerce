@@ -10,11 +10,11 @@ namespace BusinessLogicLayer.Interface
         Task RejectVendorAsync(long vendorId);
         Task<List<Product>> GetAllProductsAsync();
         Task<List<Product>> GetProductSalesAsync();
-        Task<int> GetTotalOrdersAsync();
+        Task<List<Order>> GetShippedOrdersWithDetailsAsync();
         Task<decimal> GetTotalSalesAsync();
         Task<List<string>> GetProductCategoriesAsync();
         Task<List<Product>> GetTopSellingProductsAsync(int count);
-
+        Task<List<User>> GetVendorsAsync();
         Task<IEnumerable<Product>> GetTotalProductsAsync();
     }
 }
