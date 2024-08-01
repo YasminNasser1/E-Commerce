@@ -116,13 +116,17 @@
   <ItemGroup>
     <Compile Include="BasketRepository.cs" />
     <Compile Include="GenaricRepository.cs" />
+    <Compile Include="Interface\IAdminService.cs" />
     <Compile Include="Interface\IOrderRepository.cs" />
+    <Compile Include="Interface\IVendoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interface\IBasketrepository.cs" />
     <Compile Include="Interface\IGenaricrepository.cs" />
     <Compile Include="Interface\ICartRepository.cs" />
+    <Compile Include="Repos\AdminRepository.cs" />
     <Compile Include="Repos\CartReposiory.cs" />
     <Compile Include="Repos\OrderRepository.cs" />
+    <Compile Include="Repos\VendorRepository.cs" />
     <Compile Include="Services\ITokenService.cs" />
   </ItemGroup>
   <ItemGroup>

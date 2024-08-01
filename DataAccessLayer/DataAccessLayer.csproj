@@ -190,6 +190,18 @@
     <Compile Include="Migrations\202407301802507_product add quantity.Designer.cs">
       <DependentUpon>202407301802507_product add quantity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408010709591_user have 3 types and the addition of vendor certificate.cs" />
+    <Compile Include="Migrations\202408010709591_user have 3 types and the addition of vendor certificate.Designer.cs">
+      <DependentUpon>202408010709591_user have 3 types and the addition of vendor certificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408010720306_product update in model.cs" />
+    <Compile Include="Migrations\202408010720306_product update in model.Designer.cs">
+      <DependentUpon>202408010720306_product update in model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408010723264_vendor status in user.cs" />
+    <Compile Include="Migrations\202408010723264_vendor status in user.Designer.cs">
+      <DependentUpon>202408010723264_vendor status in user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -202,6 +214,8 @@
     <Compile Include="Models\ProductType.cs" />
     <Compile Include="Models\Target.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\VendorStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -256,6 +270,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407301802507_product add quantity.resx">
       <DependentUpon>202407301802507_product add quantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408010709591_user have 3 types and the addition of vendor certificate.resx">
+      <DependentUpon>202408010709591_user have 3 types and the addition of vendor certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408010720306_product update in model.resx">
+      <DependentUpon>202408010720306_product update in model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408010723264_vendor status in user.resx">
+      <DependentUpon>202408010723264_vendor status in user.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

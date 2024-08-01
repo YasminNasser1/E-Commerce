@@ -73,5 +73,9 @@ namespace DataAccessLayer.Models
 
         [JsonIgnore]
         public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
+
+        // Sales Information
+        public int QuantitySold { get; set; } = 0;
+        public decimal TotalSales { get; set; } = 0;
     }
 }
